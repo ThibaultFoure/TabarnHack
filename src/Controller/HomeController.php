@@ -33,7 +33,8 @@ class HomeController extends AbstractController
             $newGet = array_map('trim', $_GET);
 
             $client = HttpClient::create();
-            $response = $client->request('GET', 'https://api.deezer.com/search/playlist/?q=' . $newGet['title'] . '&index0&limit=15');
+            $response = $client->request('GET', 'https://api.deezer.com/search/playlist/?q='
+                . $newGet['title'] . '&index0&limit=15');
 
             $statusCode = $response->getStatusCode();
             $results = $response->toArray();
