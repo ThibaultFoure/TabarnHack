@@ -1,0 +1,11 @@
+:root {
+    --dark-color: #000000;
+    --green-color: #18d860;
+    --red-color: #ff0000;
+    --spacing: 8px;
+    --spacing2: calc(var(--spacing) * 2);
+    --spacing3: calc(var(--spacing) * 3);
+    --spacing4: calc(var(--spacing) * 4);
+    --spacing5: calc(var(--spacing) * 5);
+    --spacing6: calc(var(--spacing) * 6);
+}
