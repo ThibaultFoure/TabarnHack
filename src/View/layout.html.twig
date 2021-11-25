@@ -16,6 +16,11 @@
 
 <body>
     {% block content %}{% endblock %}
+
+    {% block cards %}
+    {% include ('Home/_cards.html.twig') %}
+    {% endblock %}
+
     {% block javascript %}{% endblock %}
 </body>
 
