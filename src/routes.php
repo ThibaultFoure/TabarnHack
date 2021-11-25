@@ -9,5 +9,5 @@
 return [
     '' => ['HomeController', 'index',],
     'playlists' => ['HomeController', 'selectPlaylistsByCategory', ['id']],
-
+    'playlist' => ['PlaylistController', 'index'],
 ];
