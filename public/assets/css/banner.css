@@ -1,5 +1,4 @@
 .banner {
-    --ban-color: #FE0000;
     height: 500px; 
     background-repeat: no-repeat; 
     background-color: var(--ban-color);
