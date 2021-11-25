@@ -1,5 +1,9 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/banner.css">
+{% endblock %}
+
 {% block content %}
-    <h1>Hello Wilder !</h1>
+{% include 'Home/_banner.html.twig' %}
 {% endblock %}
