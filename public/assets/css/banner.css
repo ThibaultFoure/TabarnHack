@@ -1,0 +1,28 @@
+.banner {
+    height: 500px; 
+    background-repeat: no-repeat; 
+    background-color: var(--ban-color);
+    background-image: url(/assets/images/man.jpg);
+    filter: brightness(70%);
+    background-size: cover;
+    background-position: 150px 40%;
+    padding-top: 100px;
+    padding-left: 70px;
+}
+
+.text {
+    z-index: 1;
+    color: var(--light-color);
+}
+
+.banner p {
+    font-family: var(--text-font);
+    font-size: var(--text-size);
+}
+
+@media screen and (max-width: 800px) {
+    .banner {
+        background-position: 40%;
+        padding: 80px;
+    }
+}
