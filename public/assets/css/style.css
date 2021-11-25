@@ -20,6 +20,10 @@
     --spacing6     : calc(var(--spacing) * 6);
 }
 
+body {
+    background-color: var(--dark-color);
+}
+
 h1 {
     font-family: var(--title-font);
     font-size: var(--title-size);
