@@ -1,9 +1,14 @@
 {% extends 'layout.html.twig' %}
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/navbar.css">
-{% endblock %}
-{% block navbar %}
-	{% include ('Home/_navbar.html.twig') %}
-{% endblock %}
-{% block content %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/banner.css">
+<link rel="stylesheet" href="/assets/css/navbar.css">
+{% endblock %}
+
+{% block navbar %}
+{% include ('Home/_navbar.html.twig') %}
+{% endblock %}
+
+{% block content %}
+{% include 'Home/_banner.html.twig' %}
 {% endblock %}
