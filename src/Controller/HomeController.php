@@ -41,7 +41,7 @@ class HomeController extends AbstractController
 
             $client = HttpClient::create();
             $response = $client->request('GET', 'https://api.deezer.com/search/playlist?q='
-                . $newGet['name'] . '&index0&limit=15');
+                . $newGet['name'] . '&index0&limit=16');
 
             $statusCode = $response->getStatusCode();
             $results = $response->toArray();
@@ -50,7 +50,7 @@ class HomeController extends AbstractController
                 foreach ($results as $playlists) {
                     $playlists = $results['data'];
                 }
-                return $this->twig->render('Home/playlists.html.twig', ['playlists' => $playlists]);
+                return $this->twig->render('Playlists/index.html.twig', ['playlists' => $playlists]);
             }
         }
     }
