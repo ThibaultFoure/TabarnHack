@@ -40,8 +40,8 @@ class HomeController extends AbstractController
             $newGet = array_map('trim', $_GET);
 
             $client = HttpClient::create();
-            $response = $client->request('GET', 'https://api.deezer.com/search/playlist/?q='
-                . $newGet['name'] . '&index0&limit=15');
+            $response = $client->request('GET', 'https://api.deezer.com/search/playlist?q='
+                . $newGet['name'] . '&index0&limit=16');
 
             $statusCode = $response->getStatusCode();
             $results = $response->toArray();
@@ -50,7 +50,28 @@ class HomeController extends AbstractController
                 foreach ($results as $playlists) {
                     $playlists = $results['data'];
                 }
-                return $this->twig->render('Home/playlists.html.twig', ['playlists' => $playlists]);
+                return $this->twig->render('Playlists/index.html.twig', ['playlists' => $playlists]);
+            }
+        }
+    }
+
+    public function selectOnePlaylist()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $newGet = array_map('trim', $_GET);
+
+            $client = HttpClient::create();
+            $response = $client->request('GET', 'https://api.deezer.com/playlist/'
+                . $newGet['id']);
+
+            $statusCode = $response->getStatusCode();
+            $playlist = $response->toArray();
+
+            if ($statusCode === 200) {
+                // foreach ($results as $playlists) {
+                //     $playlists = $results['data'];
+                // }
+                return $this->twig->render('Playlist/index.html.twig', ['playlist' => $playlist]);
             }
         }
     }

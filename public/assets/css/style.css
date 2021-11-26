@@ -1,6 +1,9 @@
 @import url('cards.css');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;600&display=swap');
 @import url('banner.css');
+@import url('cards.css');
+@import url('footer.css');
+@import url('navbar.css');
 
 :root {
     --dark-color   : #000000;
