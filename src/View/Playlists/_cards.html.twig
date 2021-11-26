@@ -1,18 +1,17 @@
 <main class="container mt-5 mb-5">
-	<div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-		{% for playlist in playlists %}
-			<a href="playlist?id={{playlist.id}}">
-				<div class="col homeCard">
-					<div class="card rounded bg-dark text-white">
-						<img src="{{ playlist.picture_big }}" class="card-img imageCardHome" alt="category">
-						<div class="card-img-overlay d-flex flex-column p-0 ">
-							<div class="barTitle p-0 mb-0 text-dark d-grid d-md-flex rounded justify-content-md-center h-25 mt-auto">
-								<h3 name="{{ playlist.name }}" class="card-title text-dark mb-0 align-self-center text-center">{{ playlist.title }}</h3>
-							</div>
-						</div>
-					</div>
+	{% for playlist in playlists %}
+	<div class="card w-60 my-4">
+		<a class="text-decoration-none" href="playlist?id={{playlist.id}}">
+			<div class="row g-0 homeCard">
+				<div class="col-md-4 ">
+					<img src="{{ playlist.picture_big }}" class="imageCardHome img-fluid rounded-start" alt="categories">
 				</div>
-			</a>
-		{% endfor %}
+				<div class="col-md-8 align-self-center">
+					<h3 name="{{ playlist.name }}" class="card-title text-dark text-justify m-3">{{ playlist.title }}
+					</h3>
+				</div>
+			</div>
+		</a>
 	</div>
+	{% endfor %}
 </main>
