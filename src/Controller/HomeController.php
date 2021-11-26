@@ -75,4 +75,9 @@ class HomeController extends AbstractController
             }
         }
     }
+
+    public function legal()
+    {
+        return $this->twig->render('Home/legalnotice.html.twig');
+    }
 }
