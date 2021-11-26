@@ -1,13 +1,14 @@
 {% block cards %}
+<h1 class="text-center text-white mt-5 fs-2">Choisissez votre angle d'attaque</h1>
 	<main class="container mt-5 mb-5">
 		<div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
 			{% for category in categories %}
 				<a href="playlists?name={{category.name}}">
-					<div class="col homeCard">
-						<div class="card rounded bg-dark text-white">
+					<div class="col homeCard homeCardBorder homeCarderBorderOutline">
+						<div class="testCard card text-white">
 							<img src="/uploads/{{ category.image }}" class="card-img imageCardHome" alt="category">
 							<div class="card-img-overlay d-flex flex-column p-0 ">
-								<div class="barTitle p-0 mb-0 text-dark d-grid d-md-flex rounded justify-content-md-center h-25 mt-auto">
+								<div class="barTitle p-0 mb-0 text-dark d-grid d-md-flex justify-content-md-center h-25 mt-auto">
 									<h3 name="{{ category.name }}" class="card-title text-dark mb-0 align-self-center text-center">{{ category.title }}</h3>
 								</div>
 							</div>

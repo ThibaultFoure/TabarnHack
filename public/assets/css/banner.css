@@ -2,17 +2,20 @@
     height: 500px; 
     background-repeat: no-repeat; 
     background-color: var(--ban-color);
-    background-image: url(/assets/images/man.jpg);
+    background-image: url(/assets/images/bateman.jpg);
     filter: brightness(70%);
     background-size: cover;
     background-position: 150px 40%;
     padding-top: 100px;
     padding-left: 70px;
+    border-bottom: 1px solid var(--green-color);
+    border-top: 1px solid var(--green-color);
+    box-shadow: 0px 0px 10px 0px var(--green-color);
 }
 
 .text {
     z-index: 1;
-    color: var(--light-color);
+    color: var(--dark-color);
 }
 
 .banner p {
