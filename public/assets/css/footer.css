@@ -15,8 +15,3 @@
 a:hover {
     color: var(--green-color);
 }
-
-.team {
-    color: var(--light-color);
-    margin-left: 400px;
-}
