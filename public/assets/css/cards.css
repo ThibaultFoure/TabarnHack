@@ -1,13 +1,20 @@
-.btnCards {
-    background-color: var(--green-color);
-    border: none;
-    color: var(--dark-color);
-}
-
-.btnCards:hover {
-    background-color: rgba(0, 150, 0, 0.87);
-}
-
 .barTitle {
     background-color: rgba(253, 253, 253, 0.466);
+}
+
+.homeCard {
+    border: 1px solid var(--red-color);
+}
+
+.imageCardHome {
+    max-height: 300px;
+    max-width : auto;
+}
+
+.homeCard:hover {
+    --shadow-length: 12px;
+    filter         : brightness(120%);
+    overflow       : hidden;
+    transform      : scale(1.05);
+    transition     : 0.2s;
 }
