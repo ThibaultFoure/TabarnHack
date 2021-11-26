@@ -11,6 +11,7 @@ namespace App\Controller;
 
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\RequireStrictTypesSniff;
 use Symfony\Component\HttpClient\HttpClient;
+use App\Model\PlaylistManager;
 
 class HomeController extends AbstractController
 {
@@ -22,9 +23,15 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
+    public const TABLE = 'category';
+
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $playlistManager = new PlaylistManager;
+        $categories = $playlistManager->selectAll();
+
+        return $this->twig->render('Home/index.html.twig', ['categories' => $categories]);
     }
 
     public function selectPlaylistsByCategory()

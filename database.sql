@@ -10,59 +10,24 @@ SET
   SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET
   time_zone = "+00:00";
-  /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-  /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-  /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-  /*!40101 SET NAMES utf8mb4 */;
---
-  -- Base de données :  `simple-mvc`
-  --
-  -- --------------------------------------------------------
-  --
-  -- Structure de la table `item`
-  --
-  CREATE TABLE `item` (
-    `id` int(11) UNSIGNED NOT NULL,
-    `title` varchar(255) NOT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
---
-  -- Contenu de la table `item`
-  --
-INSERT INTO
-  `item` (`id`, `title`)
-VALUES
-  (1, 'Stuff'),
-  (2, 'Doodads');
---
-  -- Index pour les tables exportées
-  --
-  --
-  -- Index pour la table `item`
-  --
-ALTER TABLE
-  `item`
-ADD
-  PRIMARY KEY (`id`);
---
-  -- AUTO_INCREMENT pour les tables exportées
-  --
-  --
-  -- AUTO_INCREMENT pour la table `item`
-  --
-ALTER TABLE
-  `item`
-MODIFY
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  AUTO_INCREMENT = 3;
-  /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-  /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-  /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
---
-  -- Table structure for table `category`
-  --
-  CREATE TABLE `category` (
+CREATE TABLE `category` (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `category` varchar(100) NOT NULL,
+    `title` varchar(100) NOT NULL,
     `image` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
   );
+INSERT INTO
+  `category` (`title`, `image`)
+VALUES
+  ('Instruments dissonants', 'dissonants.webp'),
+  ('Chants étranges', 'etranges.webp'),
+  ('Chansons paillardes', 'paillarde.jpg'),
+  ('Puissance métallique', 'metal.jpg'),
+  ('Enfance gâchée', 'enfance.jpg'),
+  ("L\'humour, c'était suffisant", 'semoun.jpg'),
+  ("Bonzour les petits z\'enfants", 'cirque.webp'),
+  ("Boum boum", 'boumboum.jpg'),
+  ("La ferme", 'animaux.jpg'),
+  ("Günthër ët sön äccördëön", 'merkel.jpg'),
+  ("Plein gaz !", 'prout.jpg'),
+  ("Dessins animerdes", 'anime.webp');
