@@ -9,8 +9,8 @@
     padding-top: 100px;
     padding-left: 70px;
     border-bottom: 1px solid var(--green-color);
-    border-top: 1px solid var(--green-color);
     box-shadow: 0px 0px 10px 0px var(--green-color);
+    margin-top: 70px;
 }
 
 p {
