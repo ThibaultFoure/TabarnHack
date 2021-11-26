@@ -11,30 +11,53 @@
     border-bottom: 1px solid var(--green-color);
     border-top: 1px solid var(--green-color);
     box-shadow: 0px 0px 10px 0px var(--green-color);
-}
-
-p {
-    font-style: italic;
+    z-index: 1;
 }
 
 .text {
-    z-index: 1;
+    z-index: 2;
     color: var(--dark-color);
-}
-
-.span {
-    border: 1px solid var(--green-color);
-    text-shadow: 10px 10px 10px 10px var(--green-color);
 }
 
 .banner p {
     font-family: var(--text-font);
     font-size: var(--text-size);
+    font-style: italic;
+}
+
+h1 {
+    margin-top: -60px;
 }
 
 @media screen and (max-width: 800px) {
     .banner {
         background-position: 40%;
         padding: 80px;
+        font-size: 20px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: var(--subtitle-size);
+        color: var(--light-color);
+        margin-top: 10px;
+    }
+
+    .stop {
+        font-size: var(--text-size);
+    }
+
+    .text {
+        color: var(--light-color);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: var(--text-size);
+        margin-top: -60px;
     }
 }
