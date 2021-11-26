@@ -28,7 +28,7 @@ class HomeController extends AbstractController
 
     public function index()
     {
-        $playlistManager = new PlaylistManager;
+        $playlistManager = new PlaylistManager();
         $categories = $playlistManager->selectAll();
 
         return $this->twig->render('Home/index.html.twig', ['categories' => $categories]);
@@ -41,7 +41,7 @@ class HomeController extends AbstractController
 
             $client = HttpClient::create();
             $response = $client->request('GET', 'https://api.deezer.com/search/playlist/?q='
-                . $newGet['title'] . '&index0&limit=15');
+                . $newGet['name'] . '&index0&limit=15');
 
             $statusCode = $response->getStatusCode();
             $results = $response->toArray();

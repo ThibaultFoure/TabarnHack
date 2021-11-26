@@ -13,21 +13,22 @@ SET
 CREATE TABLE `category` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `title` varchar(100) NOT NULL,
+    `name` varchar(100) NOT NULL,
     `image` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
   );
 INSERT INTO
-  `category` (`title`, `image`)
+  `category` (`title`, `name`, `image`)
 VALUES
-  ('Instruments dissonants', 'dissonants.webp'),
-  ('Chants étranges', 'etranges.webp'),
-  ('Chansons paillardes', 'paillarde.jpg'),
-  ('Puissance métallique', 'metal.jpg'),
-  ('Enfance gâchée', 'enfance.jpg'),
-  ("L\'humour, c'était suffisant", 'semoun.jpg'),
-  ("Bonzour les petits z\'enfants", 'cirque.webp'),
-  ("Boum boum", 'boumboum.jpg'),
-  ("La ferme", 'animaux.jpg'),
-  ("Günthër ët sön äccördëön", 'merkel.jpg'),
-  ("Plein gaz !", 'prout.jpg'),
-  ("Dessins animerdes", 'anime.webp');
+  ('Instruments dissonants', 'cornemuse', 'dissonants.webp'),
+  ('Chants étranges', 'yodle suisse', 'etranges.webp'),
+  ('Chansons paillardes', 'paillarde', 'paillarde.jpg'),
+  ('Puissance métallique', 'scream metal', 'metal.jpg'),
+  ('Enfance gâchée', 'crazy hits', 'enfance.jpg'),
+  ("L\'humour, c'était suffisant", 'elie semoun', 'semoun.jpg'),
+  ("Bonzour les petits z\'enfants", 'musique de cirque', 'cirque.webp'),
+  ("Boum boum", 'gabber hardcore', 'boumboum.jpg'),
+  ("La ferme", "cris animaux", 'animaux.jpg'),
+  ("Günthër ët sön äccördëön", 'german accordion', 'merkel.jpg'),
+  ("Plein gaz !", '00P fart', 'prout.jpg'),
+  ("Dessins animerdes", 'anime fr', 'anime.webp');

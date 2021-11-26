@@ -1,20 +1,20 @@
-
 {% block cards %}
-<main class="container">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        {% for category in categories %}
-        <div class="col">
-            <div class="card bg-dark text-white">
-                <img src="/uploads/{{ category.image }}" class="card-img" alt="category">
-                <div class="card-img-overlay d-flex flex-column p-0 ">
-                    <div class="barTitle p-0 mb-0 text-dark d-grid d-md-flex justify-content-md-start mt-auto">
-                        <button href="#" class=" btnCards btn btn me-md-2" type="button">Play</button>
-                        <h3 class="card-title text-dark mb-0 text-center">{{ category.title }}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</main>
+	<main class="container mt-5 mb-5">
+		<div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+			{% for category in categories %}
+				<a href="playlists?name={{category.name}}">
+					<div class="col homeCard">
+						<div class="card rounded bg-dark text-white">
+							<img src="/uploads/{{ category.image }}" class="card-img imageCardHome" alt="category">
+							<div class="card-img-overlay d-flex flex-column p-0 ">
+								<div class="barTitle p-0 mb-0 text-dark d-grid d-md-flex rounded justify-content-md-center h-25 mt-auto">
+									<h3 name="{{ category.name }}" class="card-title text-dark mb-0 align-self-center text-center">{{ category.title }}</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</main>
 {% endblock %}
