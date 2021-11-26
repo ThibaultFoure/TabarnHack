@@ -1,6 +1,6 @@
 .barTitle {
     background-color: rgba(0, 0, 0, 0.466);
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 25px 25px;
 }
 
 .card {
@@ -11,17 +11,17 @@
 .homeCard {
     border: 2px solid var(--green-color);
     outline-offset: -10px;
-    border-radius: 50px;
+    border-radius: 25px;
 }
 
 .testCard {
-    border-radius: 50px;
+    border-radius: 25px;
 }
 
 .imageCardHome {
     max-height: 300px;
-    max-width: auto;
-    border-radius: 50px;
+    border-radius: 21px;
+    object-fit: cover;
 }
 
 .homeCard:hover {
