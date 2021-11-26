@@ -40,3 +40,13 @@ h2 {
     font-size  : var(--subtitle-size);
     font-weight: bold;
 }
+
+.card-title {
+    font-size: var(--text-size);
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    .card-title {
+        font-size: 20px;
+    }
+}
