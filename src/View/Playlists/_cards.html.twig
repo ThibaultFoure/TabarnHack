@@ -1,0 +1,21 @@
+<main class="container mt-5 mb-5">
+	<div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+		{% for playlist in playlists %}
+		<a class="text-decoration-none" href="playlist?id={{playlist.id}}">
+			<div class="col homeCard homeCardBorder homeCarderBorderOutline">
+				<div class="testCard card text-white">
+					<img src="{{ playlist.picture_big }}" class="object-fit-cover card-img imageCardHome img-fluid" alt="categories">
+					<div class="card-img-overlay d-flex flex-column p-0 ">
+						<div
+							class="barTitle p-0 mb-0 text-light d-grid d-md-flex justify-content-md-center h-25 mt-auto">
+							<h3 name="{{ playlist.name }}"
+								class="card-title text-light mb-0 align-self-center text-center">{{ playlist.title }}
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</main>

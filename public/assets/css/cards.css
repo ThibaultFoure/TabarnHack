@@ -1,0 +1,34 @@
+.barTitle {
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 0 0 25px 25px;
+}
+
+.card {
+    border : none;
+    background-color: rgba(12, 11, 11, 0.466);
+}
+
+.homeCard {
+    border: 2px solid var(--green-color);
+    outline-offset: -10px;
+    border-radius: 25px;
+}
+
+.testCard {
+    border-radius: 25px;
+}
+
+.imageCardHome {
+    max-height: 300px;
+    border-radius: 21px;
+    object-fit: cover;
+}
+
+.homeCard:hover {
+    --shadow-length: 12px;
+    filter: brightness(120%);
+    box-shadow: 0px 0px 30px -10px var(--green-color);
+    overflow: hidden;
+    transform: scale(1.05);
+    transition: 0.2s;
+}

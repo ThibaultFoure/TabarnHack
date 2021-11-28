@@ -1,0 +1,20 @@
+.navbar-music {
+    background   : var(--dark-color);
+    border-bottom: 1px solid var(--green-color);
+    box-shadow: 0px 0px 10px 0px var(--green-color);
+}
+
+.logo-navbar {
+    width : 166px;
+    height: 53px;
+}
+
+@media screen and (max-width:470px) {
+    .select-nav {
+        margin         : 60px;
+        display        : flex;
+        justify-content: center;
+
+    }
+
+}
